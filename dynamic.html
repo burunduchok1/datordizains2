@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="lv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Pages</title>
+    <style>
+      /* Общие стили */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #ffe4e1; /* Изменен цвет фона */
+      }
+
+      h2 {
+        color: #333;
+        text-align: center;
+        margin-top: 0;
+        padding-top: 20px;
+        opacity: 0;
+        animation: slideInTitle 1s ease-in-out 0.5s forwards; /* Анимация для заголовка */
+      }
+
+      /* Анимация для заголовка */
+      @keyframes slideInTitle {
+        0% {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .animated-paragraph {
+        color: #666;
+        margin-bottom: 20px;
+        opacity: 0;
+        animation: slideInParagraph 0.5s ease-in-out forwards; /* Анимация для абзацев */
+      }
+
+      /* Анимация для абзацев */
+      @keyframes slideInParagraph {
+        0% {
+          opacity: 0;
+          transform: translateX(-50px);
+        }
+        50% {
+          transform: translateX(50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .image-container {
+        text-align: center;
+        opacity: 0;
+        animation: slideInImage 1s ease-in-out 1.5s forwards; /* Анимация для изображения */
+      }
+
+      /* Анимация для изображения */
+      @keyframes slideInImage {
+        0% {
+          opacity: 0;
+          transform: translateY(-50px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      ul {
+        margin-bottom: 20px;
+      }
+
+      li {
+        margin-left: 20px;
+        list-style-type: square;
+        color: #333;
+      }
+
+      /* Стили для кнопки "Back" */
+      .back-button {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .back-button:hover {
+        background-color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Заголовок -->
+    <h2>Features of Creating Dynamic Web Pages</h2>
+
+    <!-- Абзацы с описанием -->
+    <p class="animated-paragraph">
+      Traditionally, dynamic resources are built on the same principle. The
+      website contains five to six template pages without content: articles,
+      comments, and images. Only the empty layout is specified in the code
+      stored on the server.
+    </p>
+
+    <p class="animated-paragraph">
+      When accessing a page, the necessary information is loaded from the
+      database and inserted into the ready-made template. This is done using
+      pre-written scripts. Such an approach helps to quickly add new information
+      and reduce the number of separate pages.
+    </p>
+
+    <!-- Изображения с анимацией -->
+    <div class="image-container">
+      <img
+        src="https://img.freepik.com/vecteurs-premium/interface-conviviale-illustration-concepts-modernes-ux-icones-objets-graphiques-creatifs-elements-pour-web-infographie-dans-application-smartphone-technologies-medias-conviviaux_109722-2588.jpg?w=740"
+        alt="UX/UI Design"
+        style="width: 400px"
+      />
+    </div>
+
+    <p class="animated-paragraph">
+      Working with a static website would require creating a new HTML file for
+      each new article. And if it were an informational resource, their number
+      would tend to infinity. A dynamic portal, on the other hand, contains
+      three to four layouts.
+    </p>
+
+    <!-- Список с шаблонами -->
+    <p class="animated-paragraph">The following templates are used:</p>
+    <ul>
+      <li class="animated-paragraph">For the homepage.</li>
+      <li class="animated-paragraph">Directly for the content.</li>
+      <li class="animated-paragraph">
+        For several additional sections like contacts or reviews.
+      </li>
+    </ul>
+
+    <!-- Изображения с анимацией -->
+    <div class="image-container">
+      <img
+        src="https://media.lpgenerator.ru/uploads/2020/03/25/uxui_thumb608x383.png"
+        alt="UX/UI Design"
+        style="width: 400px"
+      />
+    </div>
+
+    <!-- Кнопка "Back" -->
+    <button class="back-button" onclick="window.location.href='static.html'">
+      Back
+    </button>
+
+    <!-- Скрипт для анимации абзацев -->
+    <script>
+      const paragraphs = document.querySelectorAll(".animated-paragraph");
+      paragraphs.forEach((paragraph, index) => {
+        paragraph.style.animationDelay = `${1 + index * 0.5}s`;
+      });
+    </script>
+  </body>
+</html>

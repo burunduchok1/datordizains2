@@ -1,0 +1,123 @@
+/* styles.css */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Arial", sans-serif;
+}
+
+.navbar {
+  background-color: #fcd1df;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffffff;
+}
+
+.section {
+  padding: 100px 20px;
+  margin-top: 60px;
+  min-height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.5s ease;
+}
+
+#home {
+  background-color: #fcd1df;
+  color: #000000;
+}
+
+#about {
+  background-color: #fb607f;
+  color: #000000;
+}
+
+#services {
+  background-color: #eb5284;
+  color: #000000;
+}
+
+#contact {
+  background-color: #d71868;
+  color: #000000;
+}
+
+.section:nth-child(even) {
+  text-align: left;
+  flex-direction: row-reverse;
+}
+
+.section:nth-child(odd) {
+  text-align: right;
+}
+
+.section:hover {
+  background-color: #ee82ee;
+}
+
+h1,
+h2 {
+  color: inherit;
+  transition: transform 0.5s ease-out;
+}
+
+h1:hover,
+h2:hover {
+  transform: scale(1.05); /* Scale effect on hover */
+}
+
+/* Animation on scroll */
+.section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s;
+}
+
+.section.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 20px;
+  background-color: #ffe4e1; /* Изменен цвет фона */
+}
+
+h2 {
+  color: #333;
+  text-align: center;
+  margin-top: 0;
+  padding-top: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
